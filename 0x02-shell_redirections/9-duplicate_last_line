@@ -1,2 +1,10 @@
 #!/bin/bash
-tail -l iacta >> iacta
+
+# Save the last line of the file to a variable
+last_line=$(tail -n 1 iacta)
+
+# Append the last line to the end of the file
+echo "$last_line" >> iacta
+
+# Print a confirmation message
+echo "The last line of iacta has been duplicated!"
